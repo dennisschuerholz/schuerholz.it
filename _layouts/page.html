@@ -1,0 +1,86 @@
+---
+layout: default
+---
+<div id="page">
+
+    {% include header.html %}
+
+    <div id="content">
+        {% if page.picture %}
+        <div id="main" class="main-blog-layout">
+            <section class="clearfix odd post has-post-thumbnail">
+                <figure class="post-featured-image">
+                    <a title="Über mich" href="" style="background-image:url('images/{{ page.picture }}');"></a>
+                </figure><!-- .post-featured-image -->
+                <div class="post-featured-content">
+                    <article>
+                        <header class="entry-header">
+                            <h2 class="entry-title">
+                                <a href="" title="Über mich">Über mich</a>
+                            </h2><!-- .entry-title -->
+                        </header><!-- .entry-header -->
+                        <div class="entry-content clearfix">
+                            <p>
+                            {{ content }}
+                            <a href="" class="readmore">Continue reading</a>
+                            </p>
+                        </div><!-- .entry-content -->
+                    </article>
+                </div>
+            </section><!-- post -->
+        </div>
+        {% else %}
+        <div class="container clearfix">
+            {% if page.widget %}
+            <div id="primary">
+            {% endif %}
+            <div id="main">
+                <div class="type-page">
+                    <div class="entry-content">
+                        {{ content }}
+                    </div>
+                </div>
+            </div>
+            {% if page.widget %}
+            </div>
+            <div id="secondary">
+                {% for widget in page.widget %}
+                {% assign type = widget.type %}
+                {% if type == "ref" %}
+                    {% assign widgets = site.widget | where: 'key', widget.key %}
+                    {% assign type = widgets[0].type %}
+                    {% if widget.title %}
+                        {% assign title = widget.title %}
+                    {% else %}
+                        {% assign title = widgets[0].title %}
+                    {% endif %}
+                    {% if widget.content %}
+                        {% assign content = widget.content %}
+                    {% else %}
+                        {% assign content = widgets[0].content %}
+                    {% endif %}
+                {% endif %}
+                <aside class="widget">
+                    {% if title %}<h3 class="widget-title">{{ title }}</h3>{% endif %}
+                    {% if type == "nav" %}
+                    <ul>
+                        {% assign pages = site.pages | where: 'nav', content | sort: 'nav-order' %}
+                        {% for item in pages %}
+                        <li><a class="{% if page.url contains item.url %} current-menu-item{% endif %}" href="{{ site.baseurl }}{{ item.permalink }}">{% if item.nav-title %}{{ item.nav-title }}{% else %}{{ item.title }}{% endif %}</a></li>
+                        {% endfor %}
+                    </ul>
+                    {% else %}
+                    <div>
+                        {{ content }}
+                    </div>
+                    {% endif %}
+                </aside>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div><!-- #content -->
+
+    {% include footer.html %}
+</div><!-- #page -->

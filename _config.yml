@@ -1,0 +1,130 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Dennis Schürholz
+subtitle: IT-Dienstleistungen
+email: info@schuerholz.it
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://schuerholz.it" # the base hostname & protocol for your site, e.g. http://example.com
+social:
+    github: http://github.com/dennisschuerholz
+    twitter: https://twitter.com/schuer_holz
+    envelope: mailto:info@schuerholz.it
+    linkedin: https://www.linkedin.com/in/schuerholz/
+    xing: https://www.xing.com/profile/Dennis_Schuerholz2
+widget:
+  [
+    {
+      type: nav,
+      key: "portfolio-nav",
+      title: "Themengebiete",
+      content: "portfolio"
+    }, {
+      type: text,
+      key: "loremipsum",
+      title: "Beliebiger Text",
+      content: "Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi."
+    }
+  ]
+
+# Where things are
+source:       .
+destination:  ./_site
+plugins_dir:  ./_plugins
+layouts_dir:  ./_layouts
+data_dir:     ./_data
+includes_dir: ./_includes
+collections:  null
+sass:
+    load_paths:
+        - _sass
+        - bootstrap-4.0.0-alpha.6
+
+
+# Handling Reading
+safe:         false
+include:      [".htaccess", "_pages"]
+exclude:      ["Gemfile", "Gemfile.lock", "*~", "*.zip"]
+keep_files:   [".git", ".svn"]
+encoding:     "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Filtering Content
+show_drafts: null
+limit_posts: 0
+future:      false
+unpublished: false
+
+# Plugins
+whitelist: []
+#gems:      ["jekyll-feed"]
+
+# Conversion
+markdown:    kramdown
+highlighter: rouge
+lsi:         false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Serving
+detach:  false
+port:    4000
+host:    '::'
+baseurl: "" # does not include hostname
+
+# Outputting
+permalink:     date
+paginate_path: /page:num
+timezone:      null
+
+defaults:
+  -
+    scope:
+      path: _pages
+    values:
+      type: pages
+      layout: default
+      permalink: "/:title"
+
+# compress-Layout
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: []
+#  ignore:
+#    envs: [local]
+  blanklines: false
+  profile: false
+  startings: []
+
+# Markdown Processors
+rdiscount:
+  extensions: []
+
+redcarpet:
+  extensions: []
+
+kramdown:
+  auto_ids:       true
+  footnote_nr:    1
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+

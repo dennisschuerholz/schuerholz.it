@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width">
+        <link rel="profile" href="http://gmpg.org/xfn/11" />
+        <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+        <meta name='robots' content='noindex,follow' />
+        <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+        <link rel='dns-prefetch' href='//s.w.org' />
+        <link rel='stylesheet' id='superior_style-css'  href='{{ site.baseurl }}/style.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='superior-font-awesome-css'  href='{{ site.baseurl }}/font-awesome/css/font-awesome.css' type='text/css' media='all' />
+        <link rel='stylesheet' id='superior_google_fonts-css'  href='//fonts.googleapis.com/css?family=Lato%3A400%2C300%2C700%7CPlayfair+Display' type='text/css' media='all' />
+        <!--[if lt IE 9]>
+        <script type='text/javascript' src='js/html5.js'></script>
+        <![endif]-->
+        <style type="text/css">
+            .main-navigation .social {
+                margin-right: 2ex;
+                margin-left: 0;
+            }
+            @media only screen and (max-width: 767px) {
+                .main-navigation li.social {
+                    width: auto;
+                    border-top: none;
+                }
+            }
+            #content, #masthead, footer {
+                display: table-row;
+            }
+            html, body, #page {
+                height: 100%;
+            }
+            #page {
+                display: table;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+            #content {
+                height: 100%;
+            }
+            #content .container {
+                padding-top: 60px;
+                padding-bottom: 10px;
+            }
+        </style>
+        <script type='text/javascript' src='{{ site.baseurl }}/js/jquery-3.2.1.min.js'></script>
+    </head>
+    <body>
+        {{ content }}
+        <script type='text/javascript' src='{{ site.baseurl }}/js/scripts.js'></script>
+    </body>
+</html>

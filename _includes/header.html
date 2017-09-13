@@ -1,0 +1,40 @@
+<header id="masthead" role="banner">
+    <div class="hgroup-wrap">
+        <div class="container clearfix">
+            <section id="site-logo" class="clearfix">
+                <h1 id="site-title">
+                    <a href="{{ site.baseurl }}/" title="{{ site.title }}" rel="home">{{ site.title }}</a>
+                </h1><!-- #site-title -->
+                <h2 id="site-description">{{ site.subtitle }}</h2>
+            </section><!-- #site-logo -->
+            <button class="menu-toggle">Menu</button>
+            <section class="hgroup-right">
+                <nav id="site-navigation" class="main-navigation clearfix" role="navigation">
+                    <ul class="nav-menu">
+                        {% for link in site.social %}
+                        <li class="social"><a href="{{ link[1] }}"><i class="fa fa-{{ link[0] }}"></i></a></li>
+                        {% endfor %}
+                        {% assign pages = site.pages | where: 'nav', 'mainnav' | sort: 'nav-order' %}
+                        {% for item in pages %}
+                        <li><a class="{% if page.url contains item.url %} current-menu-item{% endif %}" href="{{ site.baseurl }}{{ item.permalink }}">{% if item.nav-title %}{{ item.nav-title }}{% else %}{{ item.title }}{% endif %}</a></li>
+                        {% endfor %}
+                    </ul>
+                </nav><!-- #access -->
+                <div class="search-toggle"></div><!-- .search-toggle -->
+                <div id="search-box" class="hide">
+                    <form action="https://wp.schuerholz.it/" method="get" class="search-form clearfix">
+                        <label class="assistive-text"> Search </label>
+                        <input type="search" placeholder="Suchen" class="s field" name="s">
+                        <input type="submit" value="Suchen" class="search-submit">
+                    </form><!-- .search-form -->
+                    <span class="arrow"></span>
+                </div><!-- #search-box -->
+            </section><!-- .hgroup-right -->
+        </div><!-- .container -->
+    </div><!-- .hgroup-wrap -->
+    <div class="page-title-wrap">
+        <div class="container clearfix">
+            <h2 class="page-title">{{ page.title }}</h2><!-- .page-title -->
+        </div><!-- .container -->
+        <div><!-- .page-title-wrap -->
+</header><!-- #masthead -->
