@@ -6,30 +6,6 @@ layout: default
     {% include header.html %}
 
     <div id="content">
-        {% if page.picture %}
-        <div id="main" class="main-blog-layout">
-            <section class="clearfix odd post has-post-thumbnail">
-                <figure class="post-featured-image">
-                    <a title="Über mich" href="" style="background-image:url('images/{{ page.picture }}');"></a>
-                </figure><!-- .post-featured-image -->
-                <div class="post-featured-content">
-                    <article>
-                        <header class="entry-header">
-                            <h2 class="entry-title">
-                                <a href="" title="Über mich">Über mich</a>
-                            </h2><!-- .entry-title -->
-                        </header><!-- .entry-header -->
-                        <div class="entry-content clearfix">
-                            <p>
-                            {{ content }}
-                            <a href="" class="readmore">Continue reading</a>
-                            </p>
-                        </div><!-- .entry-content -->
-                    </article>
-                </div>
-            </section><!-- post -->
-        </div>
-        {% else %}
         <div class="container clearfix">
             {% if page.widget %}
             <div id="primary">
@@ -79,8 +55,10 @@ layout: default
             </div>
             {% endif %}
         </div>
-        {% endif %}
     </div><!-- #content -->
+    {% if page.picture %}
+    <div style="background-image: url('{{ site.baseurl }}/images/{{ page.picture }}'); background-position-y: {{ page.picture-pos }};" class="header-image"></div>
+    {% endif %}
 
     {% include footer.html %}
 </div><!-- #page -->

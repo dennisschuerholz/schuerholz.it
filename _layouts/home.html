@@ -1,0 +1,34 @@
+---
+layout: default
+---
+<div id="page">
+
+    {% include header.html %}
+
+    <div id="content">
+        <div id="main" class="main-blog-layout">
+            <section class="clearfix odd post has-post-thumbnail">
+                <figure class="post-featured-image">
+                    <a title="Über mich" href="" style="background-image:url('{{ site.baseurl }}/images/{{ page.picture }}');"></a>
+                </figure><!-- .post-featured-image -->
+                <div class="post-featured-content">
+                    <article>
+                        <header class="entry-header">
+                            <h2 class="entry-title">
+                                <a href="" title="Über mich">Über mich</a>
+                            </h2><!-- .entry-title -->
+                        </header><!-- .entry-header -->
+                        <div class="entry-content clearfix">
+                            <p>
+                            {{ content }}
+                            <a href="" class="readmore">Continue reading</a>
+                            </p>
+                        </div><!-- .entry-content -->
+                    </article>
+                </div>
+            </section><!-- post -->
+        </div>
+    </div><!-- #content -->
+
+    {% include footer.html %}
+</div><!-- #page -->
