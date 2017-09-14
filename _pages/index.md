@@ -1,10 +1,10 @@
 ---
-layout: page
+layout: home
 title: Willkommen
 permalink: /
-#nav: mainnav
-#nav-order: 3
-#nav-title: Bewertungen
+nav: mainnav
+nav-order: -999
+nav-title: Start
 picture: DSCN5162.jpg
 ---
 

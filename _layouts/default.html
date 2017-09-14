@@ -23,11 +23,25 @@
                 float: left;
                 margin-right: 2ex;
                 margin-left: 0;
+                width: 20px;
             }
             li.social a {
                 font-size: 18px;
                 padding-top: 6px;
                 height: auto;
+            }
+            li.social label {
+                display: none;
+                position:absolute;
+                margin-left: -1ex;
+                top: 25px;
+                font-size: 14px;
+                background-color: #ffffff;
+                border: solid 5px #ffffff;
+                border-radius: 999999px;
+            }
+            li.social:hover label {
+                display: inherit;
             }
             @media only screen and (max-width: 767px) {
                 .main-navigation li.social {

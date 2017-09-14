@@ -23,25 +23,11 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://schuerholz.it" # the base hostname & protocol for your site, e.g. http://example.com
 social:
-    github: http://github.com/dennisschuerholz
-    twitter: https://twitter.com/schuer_holz
-    envelope: mailto:info@schuerholz.it
-    linkedin: https://www.linkedin.com/in/schuerholz/
-    xing: https://www.xing.com/profile/Dennis_Schuerholz2
-widget:
-  [
-    {
-      type: nav,
-      key: "portfolio-nav",
-      title: "Themengebiete",
-      content: "portfolio"
-    }, {
-      type: text,
-      key: "loremipsum",
-      title: "Beliebiger Text",
-      content: "Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi."
-    }
-  ]
+    github: ['GitHub', 'http://github.com/dennisschuerholz']
+    twitter: ['Twitter', 'https://twitter.com/schuer_holz']
+    envelope: ['E-Mail', 'mailto:info@schuerholz.it']
+    linkedin: ['LinkedIn', 'https://www.linkedin.com/in/schuerholz/']
+    xing: ['XING', 'https://www.xing.com/profile/Dennis_Schuerholz2']
 
 # Where things are
 source:       .

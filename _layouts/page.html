@@ -47,7 +47,7 @@ layout: default
                 {% for widget in page.widget %}
                 {% assign type = widget.type %}
                 {% if type == "ref" %}
-                    {% assign widgets = site.widget | where: 'key', widget.key %}
+                    {% assign widgets = site.data.widgets.widget | where: 'key', widget.key %}
                     {% assign type = widgets[0].type %}
                     {% if widget.title %}
                         {% assign title = widget.title %}
