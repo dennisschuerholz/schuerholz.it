@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Kundenstimmen
-permalink: /bewertungen
+permalink: /bewertungen/
 nav: mainnav
 nav-order: 3
 nav-title: Bewertungen

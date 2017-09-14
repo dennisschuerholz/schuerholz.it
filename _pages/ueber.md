@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Über mich
-permalink: /ueber-mich
+permalink: /ueber-mich/
 nav: mainnav
 nav-order: 1
 #nav-title: Über mich
