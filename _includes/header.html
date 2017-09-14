@@ -6,14 +6,16 @@
                     <a href="{{ site.baseurl }}/" title="{{ site.title }}" rel="home">{{ site.title }}</a>
                 </h1><!-- #site-title -->
                 <h2 id="site-description">{{ site.subtitle }}</h2>
+                <ul class="main-navigation social">
+                    {% for link in site.social %}
+                    <li class="social"><a href="{{ link[1] }}"><i class="fa fa-{{ link[0] }}"></i></a></li>
+                    {% endfor %}
+                </ul>
             </section><!-- #site-logo -->
             <button class="menu-toggle">Menu</button>
             <section class="hgroup-right">
                 <nav id="site-navigation" class="main-navigation clearfix" role="navigation">
                     <ul class="nav-menu">
-                        {% for link in site.social %}
-                        <li class="social"><a href="{{ link[1] }}"><i class="fa fa-{{ link[0] }}"></i></a></li>
-                        {% endfor %}
                         {% assign pages = site.pages | where: 'nav', 'mainnav' | sort: 'nav-order' %}
                         {% for item in pages %}
                         <li><a class="{% if page.url contains item.url %} current-menu-item{% endif %}" href="{{ site.baseurl }}{{ item.permalink }}">{% if item.nav-title %}{{ item.nav-title }}{% else %}{{ item.title }}{% endif %}</a></li>
