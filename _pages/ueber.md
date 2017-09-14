@@ -5,7 +5,8 @@ permalink: /ueber-mich/
 nav: mainnav
 nav-order: 1
 #nav-title: Über mich
-#picture: <Image in /images/>
+picture: guillaume-lebelt-209642.jpg
+picture-pos: 35%
 ---
 
 Ich bin seit Mitte 2011 als selbsständiger IT-Dienstleister für Privatkunden und kleine Unternehmen tätig. Zu den typischen Aufgabenbereichen gehören unter anderem die Einrichtung von Einzelplatzsystemen und Servern aber auch die Netzwerkadministration. Darüber hinaus bin ich auch im Feld der Webentwicklung und Webadministration tätig sowie in der Entwicklung von Apps. Somit beteilige ich mich an Projekten verschiedenster Art, ein Teil dieser Projekte wird auch auf dieser Seite verlinkt.
