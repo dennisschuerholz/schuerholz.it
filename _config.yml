@@ -25,7 +25,7 @@ url: "https://schuerholz.it" # the base hostname & protocol for your site, e.g. 
 social:
     github: ['GitHub', 'http://github.com/dennisschuerholz']
     twitter: ['Twitter', 'https://twitter.com/schuer_holz']
-    envelope: ['E-Mail', 'mailto:info@schuerholz.it']
+    envelope: ['E&#8209;Mail', 'mailto:info@schuerholz.it']
     linkedin: ['LinkedIn', 'https://www.linkedin.com/in/schuerholz/']
     xing: ['XING', 'https://www.xing.com/profile/Dennis_Schuerholz2']
 
