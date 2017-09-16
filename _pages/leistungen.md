@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: tiles
 title: Leistungen
 permalink: /leistungen/
 nav: mainnav
@@ -10,22 +10,94 @@ picture-pos: 35%
 widget:
   [
     {
-      type: ref,
-      key: "loremipsum"
-    }, {
+#      type: ref,
+#      key: "loremipsum"
+#    }, {
       type: form,
       content: { button: '', caption: '' }
-    }, {
-      type: ref,
-      key: "portfolio-nav"
+#    }, {
+#      type: ref,
+#      key: "portfolio-nav"
     }
   ]
 ---
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+{% include tile.html fa-icon='object-group' title='Webentwicklung' text='Entwicklung Ihrer Homepage oder Webanwendung nach Ihren Wünschen und Anforderungen' %}
 
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+{% include tile.html fa-icon='server' title='Webhosting' text='Bereitstellung Ihrer Website durch mich, Administration der dahinterliegenden Dienste' %}
 
-Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+{% include tile.html fa-icon='desktop' title='Technische Betreuung' text='Beratung, sowie Unterstützung bei Problemen im Einsatz von Hard- und Software' %}
 
-Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+{% include tile.html fa-icon='sitemap' title='Netzwerk' text='Planung, Einrichtung und Administration Ihres Heim- oder kleinen Firmennetzes' %}
+
+{% include tile.html fa-icon='graduation-cap' title='Schulung' text='Schulungen für den EInsatz neuer Systeme' %}
+
+{% include tile.html fa-icon='terminal' title='' text='' %}
+
+{% include tile.html fa-icon='sliders' title='' text='' %}
+
+{% include tile.html fa-icon='shield' title='' text='' %}
+
+{% include tile.html fa-icon='lock' title='' text='' %}
+
+{% include tile.html fa-icon='rocket' title='' text='' %}
+
+{% include tile.html fa-icon='question-circle' title='' text='' %}
+
+{% include tile.html fa-icon='question-circle-o' title='' text='' %}
+
+{% include tile.html fa-icon='plug' title='' text='' %}
+
+{% include tile.html fa-icon='magic' title='' text='' %}
+
+{% include tile.html fa-icon='linux' title='' text='' %}
+
+{% include tile.html fa-icon='windows' title='' text='' %}
+
+{% include tile.html fa-icon='language' title='' text='' %}
+
+{% include tile.html fa-icon='laptop' title='' text='' %}
+
+{% include tile.html fa-icon='info' title='' text='' %}
+
+{% include tile.html fa-icon='info-circle' title='' text='' %}
+
+{% include tile.html fa-icon='heart' title='' text='' %}
+
+{% include tile.html fa-icon='heart-o' title='' text='' %}
+
+{% include tile.html fa-icon='home' title='' text='' %}
+
+{% include tile.html fa-icon='handshake-o' title='' text='' %}
+
+{% include tile.html fa-icon='group' title='' text='' %}
+
+{% include tile.html fa-icon='globe' title='' text='' %}
+
+{% include tile.html fa-icon='gear' title='' text='' %}
+
+{% include tile.html fa-icon='gears' title='' text='' %}
+
+{% include tile.html fa-icon='envira' title='' text='' %}
+
+{% include tile.html fa-icon='envelope' title='' text='' %}
+
+{% include tile.html fa-icon='envelope-open' title='' text='' %}
+
+{% include tile.html fa-icon='comments' title='' text='' %}
+
+{% include tile.html fa-icon='comments-o' title='' text='' %}
+
+{% include tile.html fa-icon='certificate' title='' text='' %}
+
+{% include tile.html fa-icon='bullhorn' title='' text='' %}
+
+{% include tile.html fa-icon='android' title='' text='' %}
+
+{% include tile.html fa-icon='apple' title='' text='' %}
+
+{% include tile.html fa-icon='' title='' text='' %}
+
+{% include tile.html fa-icon='' title='' text='' %}
+
+{% include tile.html fa-icon='' title='' text='' %}
