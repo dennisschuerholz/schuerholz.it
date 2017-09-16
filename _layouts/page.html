@@ -21,20 +21,21 @@ layout: default
             </div>
             <div id="secondary">
                 {% for widget in page.widget %}
+                {% assign widgets = [] %}
                 {% assign type = widget.type %}
                 {% if type == "ref" %}
                     {% assign widgets = site.data.widgets.widget | where: 'key', widget.key %}
                     {% assign type = widgets[0].type %}
-                    {% if widget.title %}
-                        {% assign title = widget.title %}
-                    {% else %}
-                        {% assign title = widgets[0].title %}
-                    {% endif %}
-                    {% if widget.content %}
-                        {% assign content = widget.content %}
-                    {% else %}
-                        {% assign content = widgets[0].content %}
-                    {% endif %}
+                {% endif %}
+                {% if widget.title %}
+                    {% assign title = widget.title %}
+                {% else %}
+                    {% assign title = widgets[0].title %}
+                {% endif %}
+                {% if widget.content %}
+                    {% assign content = widget.content %}
+                {% else %}
+                    {% assign content = widgets[0].content %}
                 {% endif %}
                 <aside class="widget">
                     {% if title %}<h3 class="widget-title">{{ title }}</h3>{% endif %}
