@@ -10,7 +10,7 @@
         <link rel='dns-prefetch' href='//s.w.org' />
         <link rel='stylesheet' id='superior_style-css'  href='{{ site.baseurl }}/style.css?{% assign a = site.static_files | where: 'name', 'style.css' %}{{ a[0].modified_time | date: '%s%N' }}' type='text/css' media='all' />
         <link rel='stylesheet' id='superior-font-awesome-css'  href='{{ site.baseurl }}/font-awesome/css/font-awesome.css?{% assign a = site.static_files | where: 'name', 'font-awesome.css' %}{{ a[0].modified_time | date: '%s%N' }}' type='text/css' media='all' />
-        <link rel='stylesheet' href='//fonts.googleapis.com/css?family={{ site.font-family}}' type='text/css' media='all' />
+        <link rel='stylesheet' href='//fonts.googleapis.com/css?family={{ site.style.font-family}}' type='text/css' media='all' />
         <!--[if lt IE 9]>
         <script type='text/javascript' src='js/html5.js?{% assign a = site.static_files | where: 'name', 'html5.js' %}{{ a[0].modified_time | date: '%s%N' }}'></script>
         <![endif]-->

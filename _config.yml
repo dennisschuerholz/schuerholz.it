@@ -25,10 +25,14 @@ url: "https://schuerholz.it" # the base hostname & protocol for your site, e.g. 
 social:
     github: ['GitHub', 'http://github.com/dennisschuerholz']
     twitter: ['Twitter', 'https://twitter.com/schuer_holz']
-    envelope: ['E&#8209;Mail', 'mailto:info@schuerholz.it']
     linkedin: ['LinkedIn', 'https://www.linkedin.com/in/schuerholz/']
     xing: ['XING', 'https://www.xing.com/profile/Dennis_Schuerholz2']
-font-family: 'Lato%3A400%2C300%2C700%7CPlayfair+Display'
+    envelope: ['E&#8209;Mail', 'mailto:info@schuerholz.it']
+style:
+    {
+        color: '#0094aa',
+        font-family: 'Lato%3A400%2C300%2C700%7CPlayfair+Display'
+    }
 
 # Where things are
 source:       .
