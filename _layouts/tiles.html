@@ -1,0 +1,30 @@
+---
+layout: page
+---
+<style type="text/css">
+.tile {
+    display: inline-block;
+    width: 30%;
+    min-width: 340px;
+    margin: 30px auto;
+    vertical-align: top;
+    text-align: center;
+    text-align-last: center;
+}
+.tile i {
+    font-size: 50px;
+    color: #da3c04;
+}
+.tile h3 {
+    padding-top: 20px;
+}
+#tiles {
+    text-align: justify;
+    -moz-text-align-last: justify;
+    text-align-last: justify;
+}
+</style>
+<p>{{ page.intro }}</p>
+<div id="tiles">
+    {{ content }}
+</div>
