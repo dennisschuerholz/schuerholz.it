@@ -46,6 +46,8 @@ layout: default
                         <li><a class="{% if page.url contains item.url %} current-menu-item{% endif %}" href="{{ site.baseurl }}{{ item.permalink }}">{% if item.nav-title %}{{ item.nav-title }}{% else %}{{ item.title }}{% endif %}</a></li>
                         {% endfor %}
                     </ul>
+                    {% elsif type == "form" %}
+                    {% include form.html button=content.button caption=content.caption %}
                     {% else %}
                     <div>
                         {{ content }}

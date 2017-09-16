@@ -11,10 +11,13 @@ widget:
   [
     {
       type: ref,
-      key: "portfolio-nav"
+      key: "loremipsum"
+    }, {
+      type: form,
+      content: { button: 'foobar', caption: 'Überschriftchen' }
     }, {
       type: ref,
-      key: "loremipsum"
+      key: "portfolio-nav"
     }
   ]
 ---
