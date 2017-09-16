@@ -14,7 +14,7 @@ widget:
       key: "loremipsum"
     }, {
       type: form,
-      content: { button: '', caption: 'Überschriftchen' }
+      content: { button: '', caption: '' }
     }, {
       type: ref,
       key: "portfolio-nav"

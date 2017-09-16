@@ -364,7 +364,9 @@ textarea {
 	appearance: none;
 }
 input,
-textarea {
+textarea,
+select,
+button {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
