@@ -33,6 +33,38 @@ style:
         color: '#0094aa',
         font-family: 'Lato%3A400%2C300%2C700%7CPlayfair+Display'
     }
+form:
+    {
+        token:          'b2721ffeb48cf6634c39d6177b682c66',
+        successText:    '',
+        caption:        '',
+        button:         '',
+        text:
+            {
+                name:   '',
+                email:  '',
+                topic:  '',
+                text:   '',
+                submit: ''
+            },
+        placeholder:
+            {
+                name:   '',
+                email:  '',
+                topic:  '',
+                text:   ''
+            },
+        topics:
+            [
+                'Allgemeine Kontaktaufnahme',
+                'Webentwicklung',
+                'Webhosting',
+                'Technische Betreuung',
+                'Netzwerk',
+                'WLAN',
+                'Schulung'
+            ]
+    }
 
 # Where things are
 source:       .

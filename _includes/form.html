@@ -45,9 +45,13 @@
 .popup .close:hover {
     color: #0094aa;
 }
-.popup .content {
-    margin: 20px;
+.popup .content, #result {
+    margin: 0 20px 20px;
     overflow: auto;
+}
+.popup * {
+    text-align: initial;
+    text-align-last: initial;
 }
 .popup .content input, .popup .content textarea , .popup .content select , .popup .content button {
     margin: 0 0 10px;
@@ -70,6 +74,49 @@
 .popup .content label span {
     font-weight: bolder;
 }
+#result {
+    padding: 10px;
+	border-radius: 3px;
+	display: none;
+}
+#result:before {
+    font-family:FontAwesome;
+    font-style:normal;
+    font-weight:400;
+    speak:none;
+    display:inline-block;
+    text-decoration:inherit;
+    width:1em;
+    margin-right:.7em;
+    text-align:center;
+    font-variant:normal;
+    text-transform:none;
+    line-height:1em;
+    margin-left:.2em;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale
+}
+#result.success {
+    color: #4f8a10;
+    background-color: #dff2bf;
+}
+#result.warning {
+    color: #9f6000;
+    background-color: #feefb3;
+}
+#result.error {
+    color: #d8000c;
+    background-color: #ffbaba;
+}
+#result.success:before {
+        content:'\f00c';
+}
+#result.warning:before {
+        content:'\f071';
+}
+#result.error:before {
+        content:'\f057';
+}
 @media screen and (max-width: 767px){
   .popup{
     width: 100%;
@@ -79,39 +126,70 @@
   }
 }
 </style>
-<a href="#form" class="readmore">{{ include.button | default: 'Individuelle Anfrage' }}</a>
+<script type="text/javascript">
+$(function() {
+    const result = $('#result');
+    function pResult(text, css = '') {
+		$('#result').css('display', 'block');
+        $('#result').removeClass();
+        $('#result').addClass(css);
+        $('#result').text(text);
+        $('#form .popup').scrollTop(0);
+    }
+    const options = {
+        success:    function(responseText, statusText, xhr, $form) {
+            if (responseText === '') {
+                $form.resetForm();
+                pResult('{{ include.successText | default: site.form.successText | default: 'Vielen Dank für Ihre Anfrage! Ich werde bald auf Sie zurück kommen.' }}', 'success');
+            } else {
+                pResult('Im Hintergrund ist ein unbekannter Fehler aufgetreten (' + response.status + ', ' + response.statusText + '). Das liegt wahrscheinlich an einer Fehlkonfiguration, kontaktieren Sie den Betreiber unter form@schuerholz.it.', 'error');
+            }
+        },
+        error:      function(response, statusText, xhr, $form) {
+            switch(response.status) {
+                    case 401:   pResult('Der reCAPTCHA wurde nicht gelöst. Das könnte daran liegen, dass  das Formular bisher nicht registriert ist. Wenn Sie dies für einen Fehler halten kontaktieren Sie den Betreiber unter form@schuerholz.it.', 'warning'); break;
+                    case 403:   pResult('Diese Seite darf keine Anfragen an das Formular absetzen (403, wrong referrer). Das könnte daran liegen, dass die Domain dieser Seite vor kurzem gewechselt hat. Wenn Sie dies für einen Fehler halten kontaktieren Sie den Betreiber unter form@schuerholz.it.', 'error'); break;
+                    case 404:   pResult('Diese Seite darf keine Anfragen an das Formular absetzen (404, unknown token). Das könnte daran liegen, dass das Formular bisher nicht registriert ist. Wenn Sie dies für einen Fehler halten kontaktieren Sie den Betreiber unter form@schuerholz.it.', 'error'); break;
+                    case 500:
+                    default:    pResult('Im Hintergrund ist ein unbekannter Fehler aufgetreten (' + response.status + ', ' + response.statusText + '). Das liegt wahrscheinlich an einer Fehlkonfiguration, kontaktieren Sie den Betreiber unter form@schuerholz.it.', 'error');
+            }
+            console.log(response);
+        }
+    }
+    $('#form form').ajaxForm(options);
+});
+</script>
+<a href="#form" class="readmore">{{ include.button | default: site.form.button | default: 'Individuelle Anfrage' }}</a>
 <div id="form" class="overlay">
     <div class="popup container">
-        <h3>{{ include.caption | default: 'Individuelle Anfrage' }}</h3>
+        <h3>{{ include.caption | default: site.form.caption | default: 'Individuelle Anfrage' }}</h3>
         <a class="close" href="#">&times;</a>
+        <div id="result"></div>
         <div class="content">
-            <form accept-charset="UTF-8" action="https://form.schuerholz.it/form.php?token=b2721ffeb48cf6634c39d6177b682c66&r=dev.schuerholz.it" method="POST">
+            <form accept-charset="UTF-8" action="https://form.schuerholz.it/form.php?token={{ include.token | default: site.form.token}}" method="POST">
                 <label>
-                    <span>Name</span>
-                    <input type="text" name="name" placeholder="Erika Mustermann" required="required" />
+                    <span>{{ include.text.name | default: site.form.text.name | default: 'Name' }}</span>
+                    <input type="text" name="name" placeholder="{{ include.placeholder.name | default: site.form.placeholder.name | default: 'Erika Mustermann' }}" required="required" />
                 </label>
                 <label>
-                    <span>E-Mail</span>
-                    <input type="email" name="email" placeholder="erika@mustermann.de" required="required" />
+                    <span>{{ include.text.email | default: site.form.text.email | default: 'E-Mail' }}</span>
+                    <input type="email" name="email" placeholder="{{ include.placeholder.email | default: site.form.placeholder.email | default: 'erika@mustermann.de' }}" required="required" />
                 </label>
                 <label>
-                    <span>Thema der Anfrage</span>
+                    <span>{{ include.text.topic | default: site.form.text.topic | default: 'Thema der Anfrage' }}</span>
                     <select name="thema" required="required">
-                        <option disabled="disabled" selected="selected">Thema</option>
-                        <option>Webentwicklung</option>
-                        <option>Webhosting / E-Mail</option>
-                        <option>Netzinfrastruktur</option>
-                        <option>Systemkonfiguration</option>
-                        <option>Supportfragen</option>
-                        <option>Anderes</option>
+                        <option disabled="disabled" selected="selected">{{ include.placeholder.topic | default: site.form.placeholder.topic | default: 'Thema' }}</option>
+						{% assign items = include.topics | default: site.form.topics | default: [] %}
+						{% for item in items %}
+						<option>{{ item }}</option>
+						{% endfor %}
                     </select>
                 </label>
                 <label>
-                    <span>Anfragetext</span>
-                    <textarea rows="5" name="anfrage" placeholder="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." required="required"></textarea>
+                    <span>{{ include.text.text | default: site.form.text.text | default: 'Anfragetext' }}</span>
+                    <textarea rows="5" name="anfrage" placeholder="{{ include.placeholder.text | default: site.form.placeholder.text | default: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.' }}" required="required"></textarea>
                 </label>
-                <input type="hidden" name="utf8" value="✓">
-                <button type="submit" class="readmore">Absenden</button>
+                <button type="submit" class="readmore">{{ include.text.submit | default site.form.text.submit | default: 'Absenden' }}</button>
             </form>
         </div>
     </div>
