@@ -44,7 +44,7 @@ form:
                 name:   '',
                 email:  '',
                 topic:  '',
-                text:   '',
+                text:   'Ihre Anfrage',
                 submit: ''
             },
         placeholder:

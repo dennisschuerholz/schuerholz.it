@@ -189,7 +189,7 @@ $(function() {
                     <span>{{ include.text.text | default: site.form.text.text | default: 'Anfragetext' }}</span>
                     <textarea rows="5" name="anfrage" placeholder="{{ include.placeholder.text | default: site.form.placeholder.text }}" required="required"></textarea>
                 </label>
-                <button type="submit" class="readmore">{{ include.text.submit | default site.form.text.submit | default: 'Absenden' }}</button>
+                <button type="submit" class="readmore">{{ include.text.submit | default: site.form.text.submit | default: 'Absenden' }}</button>
             </form>
         </div>
     </div>
