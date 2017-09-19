@@ -18,10 +18,15 @@ layout: page
 .tile h3 {
     padding-top: 20px;
 }
+.tile > :first-child {
+    padding-top: 0;
+    margin-top: 0;
+}
 #tiles {
     text-align: justify;
     -moz-text-align-last: justify;
     text-align-last: justify;
+    margin-top: -30px;
 }
 </style>
 <p>{{ page.intro }}</p>
