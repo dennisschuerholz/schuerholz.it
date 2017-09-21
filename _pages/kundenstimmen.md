@@ -33,6 +33,13 @@ Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming 
 <div class="tile">
 <h3>Alexander Trubov (privat)</h3>
 <p>
-Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+Seit längere Zeit zog ich in Betracht, eine Website für meine Online-Präsenz zu
+erstellen.<br />
+Dennis Schürholz verhalf mir dabei meine Website zu hosten und übernahm
+ebenfalls auch das E-Mail Hosting der Website. Meine Wünsche und Ideen wurden zu
+meiner Zufriedenheit erfüllt und umgesetzt.
+Er arbeitet sehr systematisch und professionell, sodass seine Vorschläge und
+Anregungen stets auf meine Bedürfnisse abgestimmt waren.<br />
+Ich kann Dennis Schürholz herzlichst weiterempfehlen.
 </p>
 </div>
