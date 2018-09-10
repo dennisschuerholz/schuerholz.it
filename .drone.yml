@@ -1,36 +1,32 @@
 pipeline:
   build:
     image: jekyll/jekyll:builder
+    volumes:
+      - /var/www/10000_schuerholz.it/bundle:/usr/local/bundle
     commands:
-      - "cp -r . /srv/jekyll/"
-      - "cd /srv/jekyll"
-      - 'chown -R jekyll:jekyll .'
+      - 'chown jekyll:jekyll .'
       - 'bundle install'
-      - 'bundle exec jekyll build'
+      - 'jekyll build'
 
   deploy:
     image: jekyll/jekyll:builder
     volumes:
-      - /var/www/10000_schuerholz.it/htdocs:/deploy
+      - /var/www/10000_schuerholz.it/htdocs:/srv/jekyll
+      - /var/www/10000_schuerholz.it/bundle:/usr/local/bundle
     when:
       branch: master
     commands:
-      - "cp -r . /srv/jekyll/"
-      - "cd /srv/jekyll"
-      - 'chown -R jekyll:jekyll .'
-      - 'bundle install'
-      - 'bundle exec jekyll build'
-      - 'rsync -vh -rz --links --checksum --delete _site/ /deploy'
+      - 'chown jekyll:jekyll .'
+      - 'jekyll build'
+      - 'rsync -vh -rz --links --checksum --delete _site/ /srv/jekyll'
   deploy:
     image: jekyll/jekyll:builder
     volumes:
-      - /var/www/10000_schuerholz.it/devdocs:/deploy
+      - /var/www/10000_schuerholz.it/devdocs:/srv/jekyll
+      - /var/www/10000_schuerholz.it/bundle:/usr/local/bundle
     when:
       branch: develop
     commands:
-      - "cp -r . /srv/jekyll/"
-      - "cd /srv/jekyll"
-      - 'chown -R jekyll:jekyll .'
-      - 'bundle install'
-      - 'bundle exec jekyll build'
-      - 'rsync -vh -rz --links --checksum --delete _site/ /deploy'
+      - 'chown jekyll:jekyll .'
+      - 'jekyll build'
+      - 'rsync -vh -rz --links --checksum --delete _site/ /srv/jekyll'
