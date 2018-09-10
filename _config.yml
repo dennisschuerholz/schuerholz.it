@@ -83,7 +83,7 @@ sass:
 # Handling Reading
 safe:         false
 include:      [".htaccess", "_pages"]
-exclude:      ["Gemfile", "Gemfile.lock", "*~", "*.zip", "wp-save.html", "wp-theme-readme.txt"]
+exclude:      ["Gemfile", "Gemfile.lock", "*~", "*.zip", "wp-save.html", "wp-theme-readme.txt", "_pages/kundenstimmen.md"]
 keep_files:   [".git", ".svn"]
 encoding:     "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"

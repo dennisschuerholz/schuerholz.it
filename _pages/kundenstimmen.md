@@ -35,8 +35,8 @@ Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming 
 <p>
 Seit längere Zeit zog ich in Betracht, eine Website für meine Online-Präsenz zu
 erstellen.<br />
-Dennis Schürholz verhalf mir dabei meine Website zu hosten und übernahm
-ebenfalls auch das E-Mail Hosting der Website. Meine Wünsche und Ideen wurden zu
+Dennis Schürholz verhalf mir dazu, indem er meine Website hostet und außerdem
+das E-Mail-Hosting übernommen hat. Meine Wünsche und Ideen wurden zu
 meiner Zufriedenheit erfüllt und umgesetzt.
 Er arbeitet sehr systematisch und professionell, sodass seine Vorschläge und
 Anregungen stets auf meine Bedürfnisse abgestimmt waren.<br />
