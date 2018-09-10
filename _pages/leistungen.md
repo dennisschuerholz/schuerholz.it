@@ -32,4 +32,9 @@ picture-pos: 35%
 
 {% include tile.html fa-icon='wifi' title='WLAN' text='Planung, Einrichtung und Administration Ihres privaten oder öffentlichen Heim- oder kleinen Firmenfunknetzes' %}
 
-{% include form.html button='' caption='' %}
+<div class="tile">
+    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+    <div style="margin:20px 0;">
+        {% include form.html button='' caption='' %}
+    </div>
+</div>
