@@ -11,7 +11,7 @@ pipeline:
   deploy:
     image: jekyll/jekyll:builder
     volumes:
-      - /var/www/1000_schuerholz.it/htdocs:/deploy
+      - /var/www/10000_schuerholz.it/htdocs:/deploy
     when:
       branch: master
     commands:
@@ -24,7 +24,7 @@ pipeline:
   deploy:
     image: jekyll/jekyll:builder
     volumes:
-      - /var/www/1000_schuerholz.it/devdocs:/deploy
+      - /var/www/10000_schuerholz.it/devdocs:/deploy
     when:
       branch: develop
     commands:
