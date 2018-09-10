@@ -32,6 +32,4 @@ picture-pos: 35%
 
 {% include tile.html fa-icon='wifi' title='WLAN' text='Planung, Einrichtung und Administration Ihres privaten oder öffentlichen Heim- oder kleinen Firmenfunknetzes' %}
 
-{% include tile.html fa-icon='graduation-cap' title='Schulung' text='Schulungen und Webcasts für Erläuterungen z.B. beim Einsatz neuer Systeme' %}
-
 {% include form.html button='' caption='' %}

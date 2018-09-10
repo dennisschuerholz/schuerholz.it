@@ -20,4 +20,4 @@ Mahndorfer Heerstraße 35
 E-Mail: [info@schuerholz.it](mailto:info@schuerholz.it)  
 Telefon: [0177 / 14 38 733](tel:00491771438733)
 
-{% include form.html button='foobar' caption='Überschriftchen' %}
+{% include form.html button='Kontaktanfrage' caption='Kontaktanfrage' %}
