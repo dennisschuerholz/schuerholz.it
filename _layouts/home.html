@@ -21,7 +21,7 @@ layout: default
                         <div class="entry-content clearfix">
                             <p>
                             {{ content }}
-                            <a href="{{ page.link | prepend: site.baseurl }}" class="readmore">Mehr erfahren</a>
+                            <a href="{{ page.link | prepend: site.baseurl }}" class="readmore">{{ page.link-text | default: "Mehr erfahren" }}</a>
                             </p>
                         </div><!-- .entry-content -->
                     </article>

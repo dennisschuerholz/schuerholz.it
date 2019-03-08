@@ -1,30 +1,16 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: Dennis Schürholz
 subtitle: IT-Dienstleistungen
 email: info@schuerholz.it
-description: > # this means to ignore newlines until "baseurl:"
+description: >
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://schuerholz.it" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""
+url: "https://schuerholz.it"
 social:
+    id-card: ['Lebenslauf', 'https://www.dennisschuerholz.de']
     github: ['GitHub', 'http://github.com/dennisschuerholz']
-    twitter: ['Twitter', 'https://twitter.com/schuer_holz']
+#    twitter: ['Twitter', 'https://twitter.com/schuer_holz']
     linkedin: ['LinkedIn', 'https://www.linkedin.com/in/schuerholz/']
     xing: ['XING', 'https://www.xing.com/profile/Dennis_Schuerholz2']
     envelope: ['E&#8209;Mail', 'mailto:info@schuerholz.it']
@@ -83,7 +69,7 @@ sass:
 # Handling Reading
 safe:         false
 include:      [".htaccess", "_pages"]
-exclude:      ["Gemfile", "Gemfile.lock", "*~", "*.zip", "wp-save.html", "wp-theme-readme.txt", "_pages/kundenstimmen.md"]
+exclude:      ["Gemfile", "Gemfile.lock", "vendor/bundle", "*~", "*.zip", "wp-save.html", "wp-theme-readme.txt", "_pages/kundenstimmen.md", "_pages/ueber.md"]
 keep_files:   [".git", ".svn"]
 encoding:     "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
@@ -109,7 +95,6 @@ incremental: false
 detach:  false
 port:    4000
 host:    '::'
-baseurl: "" # does not include hostname
 
 # Outputting
 permalink:     date

@@ -1105,7 +1105,7 @@ input.s:focus {
 }
 #main .post,
 #main .attachment {
-	margin-bottom: 50px;
+	/*margin-bottom: 50px;*/
 	position: relative;
 }
 #main .type-page {
@@ -2499,4 +2499,9 @@ div.bbp-submit-wrapper button {
 		width: 50%;
 		padding-left: 14px;
 	}
+}
+
+.fa {
+    width: 1em;
+    text-align: center;
 }
