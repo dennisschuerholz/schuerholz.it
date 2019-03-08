@@ -1,12 +1,12 @@
 ---
 layout: home
-title: Willkommen
+title: Über mich
 permalink: /
 nav: mainnav
 nav-order: -999
 nav-title: Über mich
 picture: DSCN5162.jpg
-text-title: Über mich
+picture-title: Dennis Schürholz
 link: /kontakt/
 link-text: Kontakt aufnehmen
 ---
