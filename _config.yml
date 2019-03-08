@@ -8,7 +8,7 @@ description: >
 baseurl: ""
 url: "https://schuerholz.it"
 social:
-    id-card: ['Lebenslauf', 'https://www.dennisschuerholz.de']
+    user: ['Lebenslauf', 'https://www.dennisschuerholz.de']
     github: ['GitHub', 'http://github.com/dennisschuerholz']
 #    twitter: ['Twitter', 'https://twitter.com/schuer_holz']
     linkedin: ['LinkedIn', 'https://www.linkedin.com/in/schuerholz/']
