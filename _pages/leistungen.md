@@ -22,9 +22,9 @@ picture-pos: 35%
 #  ]
 ---
 
-{% include tile.html fa-icon='object-group' title='Webentwicklung' text='Entwicklung Ihrer Website oder Webanwendung nach Ihren Wünschen und Anforderungen' %}
+{% include tile.html fa-icon='object-group' title='Webentwicklung' text='Entwicklung Ihrer Homepage oder Webanwendung nach Ihren Wünschen und Anforderungen' %}
 
-{% include tile.html fa-icon='server' title='Webhosting' text='Webhosting und Administration aller verbundenen Dienste wie E-Mail, Datenbanken usw.' %}
+{% include tile.html fa-icon='server' title='Webhosting' text='Webhosting und Administration aller verbundenen Dienste wie DNS, E-Mail, Datenbanken usw.' %}
 
 {% include tile.html fa-icon='desktop' title='Technische Betreuung' text='Beratung, Einrichtung, sowie Unterstützung bei Problemen im Einsatz von Hard- und Software' %}
 
