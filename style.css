@@ -1205,18 +1205,6 @@ input.s:focus {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
-.main-blog-layout .odd .post-featured-image:after {
-	left: -4px;
-	right: auto;
-	content: '\f0da';
-}
-.main-blog-layout .odd .post-featured-image {
-	right: 0;
-	left: inherit;
-}
-.main-blog-layout .odd .post-featured-content {
-	float: left;
-}
 .main-blog-layout .has-post-thumbnail.format-link .post-featured-content,
 .main-blog-layout .has-post-thumbnail.format-quote .post-featured-content {
 	position: relative;
@@ -2381,7 +2369,7 @@ div.bbp-submit-wrapper button {
 		left: 50%;
 		top: auto;
 		right: auto;
-		bottom: -24px;
+		bottom: -32px;
 		-webkit-transform: translateX(-50%);
 		-ms-transform: translateX(-50%);
 		transform: translateX(-50%);

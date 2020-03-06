@@ -9,7 +9,7 @@ layout: default
         <div id="main" class="main-blog-layout">
             <section class="clearfix odd post has-post-thumbnail">
                 <figure class="post-featured-image">
-                    <a title="{{ page.picture-title }}" href="{{ page.link | prepend: site.baseurl }}" style="background-image:url('{{ site.baseurl }}/images/{{ page.picture }}');"></a>
+                    <a title="{{ page.picture-title }}" href="{{ page.link | prepend: site.baseurl }}" style="background-image:url('{{ site.baseurl }}/images/{{ page.picture }}');background-position-x: {{ page.picture-pos }};"></a>
                 </figure><!-- .post-featured-image -->
                 <div class="post-featured-content">
                     <article>
