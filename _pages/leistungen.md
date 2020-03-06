@@ -5,7 +5,7 @@ permalink: /leistungen/
 nav: mainnav
 nav-order: 2
 #nav-title: Leistungen
-picture: markus-spiske-207946.jpg
+picture: markus-spiske-207946_1920_85.jpg
 picture-pos: 35%
 #widget:
 #  [

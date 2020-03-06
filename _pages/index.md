@@ -5,7 +5,8 @@ permalink: /
 nav: mainnav
 nav-order: -999
 nav-title: Über mich
-picture: DSCN5162.jpg
+picture: WP_20190523_16_19_48_Pro_scale_1920_85.jpg
+picture-pos: 35%
 picture-title: Dennis Schürholz
 link: /kontakt/
 link-text: Kontakt aufnehmen

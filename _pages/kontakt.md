@@ -5,7 +5,7 @@ permalink: /kontakt/
 nav: mainnav
 nav-order: 999
 #nav-title: Kontakt
-picture: william-bout-264826.jpg
+picture: william-bout-264826_1920_85.jpg
 picture-pos: 45%
 ---
 
