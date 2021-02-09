@@ -9,8 +9,8 @@ picture:
 picture-pos: 70%
 ---
 
-Auf diesen Seiten werden diverse Fremdinhalte und Bibliotheken verwendet daren
-Lizenzen eine freie Verwendung zulässt. Zum Teil ist für diese auch keine
+Auf diesen Seiten werden diverse Fremdinhalte und Bibliotheken verwendet, deren
+Lizenzen eine freie Verwendung zulassen. Zum Teil ist für diese auch keine
 Namensnennung notwendig, ich möchte dies im Rahmen eines fairen Austausches
 jedoch dennoch auflisten.
 
