@@ -18,6 +18,6 @@ Semmelweisstraße 7
 ### Kontakt
 
 E-Mail: [info@schuerholz.it](mailto:info@schuerholz.it)  
-Telefon: [0177 / 14 38 733](tel:00491771438733) (meist Mailbox)
+Telefon: [015678 / 390 797](tel:004915678390797) (meist Mailbox)
 
 {% include form.html button='Kontaktanfrage' caption='Kontaktanfrage' %}

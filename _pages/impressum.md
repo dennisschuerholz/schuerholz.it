@@ -15,6 +15,7 @@ Semmelweisstraße 7<br />
 28309 Bremen</p>
 <h3>Kontakt:</h3>
 E-Mail: info<i class="fa fa-at"></i>schuerholz.it
+Telefon: 015678 / 390 797
 <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</h3>
 <p>Dennis Schürholz<br />
 Semmelweisstraße 7<br />
