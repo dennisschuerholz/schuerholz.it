@@ -125,6 +125,7 @@
 	margin: 0;
   }
 }
+.nhmn { display: none; }
 </style>
 <script type="text/javascript">
 $(function() {
@@ -184,6 +185,10 @@ $(function() {
 						<option>{{ item }}</option>
 						{% endfor %}
                     </select>
+                </label>
+                <label class="nhmn">
+                    <span>{{ include.text.nhmn | default: site.form.text.nhmn | default: 'nhmn' }}</span>
+                	<input type="checkbox" name="nhmn" />
                 </label>
                 <label>
                     <span>{{ include.text.text | default: site.form.text.text | default: 'Anfragetext' }}</span>
